@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date Tue 11 Jun 2013 07:31:15 PM NZST
+PCBNEW-BOARD Version 2 date Wed 12 Jun 2013 01:33:03 AM NZST
 
 # Created by Pcbnew(2013-mar-13)-testing
 
@@ -34,7 +34,7 @@ $SETUP
 Layers 2
 Layer[0] B.Cu signal
 Layer[15] F.Cu signal
-TrackWidth 0.5
+TrackWidth 0.254
 TrackWidthList 0.15
 TrackWidthList 0.25
 TrackWidthList 0.5
@@ -1412,6 +1412,12 @@ At SMD N 00888000
 Ne 20 "GND"
 Po 1.6002 -2.49936
 $EndPAD
+$SHAPE3D
+Na "share/modules/packages3d/usb_b_smd_mini_socket.wrl"
+Sc 0.3937 0.3937 0.3937
+Of 0 0 0
+Ro 0 0 -90
+$EndSHAPE3D
 $EndMODULE USB-B_mini
 $MODULE OBO-1206C
 Po 80 55 1800 15 51B6AF5D 51B69DC8 ~~
@@ -1438,6 +1444,12 @@ At STD N 00E0FFFF
 Ne 28 "N-0000018"
 Po 3.79984 0
 $EndPAD
+$SHAPE3D
+Na "share/modules/packages3d/piezo-OBO-1206.wrl"
+Sc 0.3937 0.3937 0.3937
+Of 0 0 0
+Ro 0 0 -90
+$EndSHAPE3D
 $EndMODULE OBO-1206C
 $MODULE SM0603
 Po 81.5 110 1800 15 4E43A3D1 51B69DDD ~~
