@@ -1,5 +1,5 @@
-update=Wed 12 Jun 2013 09:28:12 PM NZST
-last_client=pcbnew
+update=Wed 12 Jun 2013 10:34:36 PM NZST
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -65,7 +65,7 @@ DrawSegmentWidth="    0.150000"
 BoardOutlineThickness="    0.100000"
 ModuleOutlineThickness="    0.150000"
 [pcbnew/libraries]
-LibDir=
+LibDir=share/modules
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -82,3 +82,5 @@ LibName13=dip_sockets
 LibName14=pga_sockets
 LibName15=valves
 LibName16=share/modules/gruvin
+[general]
+version=1

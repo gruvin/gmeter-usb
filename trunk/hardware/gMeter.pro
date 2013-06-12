@@ -1,6 +1,6 @@
-update=Wed 12 Jun 2013 05:51:55 PM NZST
+update=Wed 12 Jun 2013 10:24:39 PM NZST
 version=1
-last_client=pcbnew
+last_client=kicad
 [cvpcb]
 version=1
 NetITyp=0
@@ -11,8 +11,6 @@ LibDir=
 NetType=0
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=share/library
@@ -110,3 +108,5 @@ LibName9=led
 LibName10=dip_sockets
 LibName11=1pin_225x08
 LibName12=gruvin
+[general]
+version=1
