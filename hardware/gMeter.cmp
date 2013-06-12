@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = Tue 11 Jun 2013 12:03:06 AM NZST
+Cmp-Mod V01 Created by PcbNew date = Wed 12 Jun 2013 06:01:59 PM NZST
 
 BeginCmp
 TimeStamp = /4ED087A6;
@@ -11,7 +11,7 @@ BeginCmp
 TimeStamp = /4ED087CB;
 Reference = C2;
 ValeurCmp = 22u;
-IdModule  = SM1206POL;
+IdModule  = SM1210_GRUVIN_POL;
 EndCmp
 
 BeginCmp
@@ -39,28 +39,28 @@ BeginCmp
 TimeStamp = /4E912A59;
 Reference = D1;
 ValeurCmp = Sctky;
-IdModule  = SM0603;
+IdModule  = SM0603_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A5F;
 Reference = D2;
 ValeurCmp = Sctky;
-IdModule  = SM0603;
+IdModule  = SM0603_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A33;
 Reference = D3;
 ValeurCmp = 3.6v Zen;
-IdModule  = SM1206POL;
+IdModule  = SM1206_GRUVIN_POL;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A4B;
 Reference = D4;
 ValeurCmp = 3.6v Zen;
-IdModule  = SM1206POL;
+IdModule  = SM1206_GRUVIN_POL;
 EndCmp
 
 BeginCmp
@@ -213,7 +213,7 @@ EndCmp
 BeginCmp
 TimeStamp = /51A7498E;
 Reference = R8;
-ValeurCmp = 5K1;
+ValeurCmp = 5K6;
 IdModule  = SM0603;
 EndCmp
 
@@ -305,7 +305,7 @@ BeginCmp
 TimeStamp = /51A9B60C;
 Reference = U1;
 ValeurCmp = LN-6206-30;
-IdModule  = SOT89_GIO;
+IdModule  = SOT89_REG-GIO;
 EndCmp
 
 BeginCmp
