@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Wed 12 Jun 2013 05:59:44 PM NZST
+PCBNEW-LibModule-V1  Wed 12 Jun 2013 09:29:56 PM NZST
 # encoding utf-8
 Units mm
 $INDEX
@@ -1552,6 +1552,12 @@ Po -1.75 -2.5
 .SolderMask 0.05
 .LocalClearance 0.125
 $EndPAD
+$SHAPE3D
+Na "share/modules/packages3d/smd/ATmega88P-MLF32.wrl"
+Sc 0.3937 0.3937 0.3937
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
 $EndMODULE MLF-32
 $MODULE MLF-32_2mmVIA_SINK
 Po 0 0 0 15 51B5BCDE 00000000 ~~
@@ -1884,6 +1890,12 @@ At STD N 00E0FFFF
 Ne 0 ""
 Po 0 0
 $EndPAD
+$SHAPE3D
+Na "share/modules/packages3d/smd/ATmega88P-MLF32.wrl"
+Sc 0.3937 0.3937 0.3937
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
 $EndMODULE MLF-32_2mmVIA_SINK
 $MODULE MLF-32_4x4_SINK
 Po 0 0 0 15 51B5BAAD 00000000 ~~
@@ -2337,6 +2349,12 @@ Ne 0 ""
 Po 1.2 1.2
 .SolderMask 0.05
 $EndPAD
+$SHAPE3D
+Na "share/modules/packages3d/smd/ATmega88P-MLF32.wrl"
+Sc 0.3937 0.3937 0.3937
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
 $EndMODULE MLF-32_4x4_SINK
 $MODULE MLF-32_FULL_SINK
 Po 0 0 0 15 51B5B98A 00000000 ~~
@@ -2669,6 +2687,12 @@ At SMD N 00888000
 Ne 0 ""
 Po 0 0
 $EndPAD
+$SHAPE3D
+Na "share/modules/packages3d/smd/ATmega88P-MLF32.wrl"
+Sc 0.3937 0.3937 0.3937
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
 $EndMODULE MLF-32_FULL_SINK
 $MODULE OBO-1206C
 Po 0 0 0 15 51A98A73 00000000 ~~
