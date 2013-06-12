@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = Wed 12 Jun 2013 06:34:02 PM NZST
+Cmp-Mod V01 Created by PcbNew date = Wed 12 Jun 2013 10:29:25 PM NZST
 
 BeginCmp
 TimeStamp = /4ED087A6;
@@ -60,56 +60,56 @@ BeginCmp
 TimeStamp = /51A74399;
 Reference = D5;
 ValeurCmp = RED;
-IdModule  = LED-1206;
+IdModule  = LED-1206_RED;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A7439C;
 Reference = D6;
 ValeurCmp = ORANGE;
-IdModule  = LED-1206;
+IdModule  = LED-1206_ORG;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A7439D;
 Reference = D7;
 ValeurCmp = ORANGE;
-IdModule  = LED-1206;
+IdModule  = LED-1206_ORG;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A7439F;
 Reference = D8;
 ValeurCmp = ORANGE';
-IdModule  = LED-1206;
+IdModule  = LED-1206_YEL;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743A0;
 Reference = D9;
 ValeurCmp = YELLOW;
-IdModule  = LED-1206;
+IdModule  = LED-1206_YEL;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743A2;
 Reference = D10;
 ValeurCmp = YELLOW;
-IdModule  = LED-1206;
+IdModule  = LED-1206_YEL;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743A4;
 Reference = D11;
 ValeurCmp = YELLOW;
-IdModule  = LED-1206;
+IdModule  = LED-1206_GREEN;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743A6;
 Reference = D12;
 ValeurCmp = GREEN;
-IdModule  = LED-1206;
+IdModule  = LED-1206_GREEN;
 EndCmp
 
 BeginCmp
