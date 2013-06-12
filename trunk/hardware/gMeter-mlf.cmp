@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Tue 11 Jun 2013 04:58:06 PM NZST
+Cmp-Mod V01 Created by PcbNew date = Wed 12 Jun 2013 06:34:02 PM NZST
 
 BeginCmp
 TimeStamp = /4ED087A6;
@@ -11,7 +11,7 @@ BeginCmp
 TimeStamp = /4ED087CB;
 Reference = C2;
 ValeurCmp = 22u;
-IdModule  = SM1206_GRUVIN_POL;
+IdModule  = SM1210_GRUVIN_POL;
 EndCmp
 
 BeginCmp
@@ -32,28 +32,28 @@ BeginCmp
 TimeStamp = /4E912A59;
 Reference = D1;
 ValeurCmp = Sctky;
-IdModule  = sod323;
+IdModule  = SOD323_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A5F;
 Reference = D2;
 ValeurCmp = Sctky;
-IdModule  = sod323;
+IdModule  = SOD323_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A33;
 Reference = D3;
 ValeurCmp = 3.6v Zen;
-IdModule  = sod323;
+IdModule  = SOD323_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A4B;
 Reference = D4;
 ValeurCmp = 3.6v Zen;
-IdModule  = sod323;
+IdModule  = SOD323_DIODE;
 EndCmp
 
 BeginCmp
