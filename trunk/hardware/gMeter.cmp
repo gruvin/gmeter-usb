@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = Wed 12 Jun 2013 06:01:59 PM NZST
+Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Wed 12 Jun 2013 09:56:20 PM NZST
 
 BeginCmp
 TimeStamp = /4ED087A6;
@@ -67,7 +67,7 @@ BeginCmp
 TimeStamp = /51A74399;
 Reference = D5;
 ValeurCmp = RED;
-IdModule  = LED-1206;
+IdModule  = LED-1206_RED;
 EndCmp
 
 BeginCmp
@@ -116,7 +116,7 @@ BeginCmp
 TimeStamp = /51A743A6;
 Reference = D12;
 ValeurCmp = GREEN;
-IdModule  = LED-1206;
+IdModule  = LED-1206_GREEN;
 EndCmp
 
 BeginCmp
@@ -274,28 +274,28 @@ IdModule  = SM0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /51A74BE2;
+TimeStamp = /51A9A872;
 Reference = S1;
 ValeurCmp = CONN_1;
 IdModule  = PIN_ARRAY_1;
 EndCmp
 
 BeginCmp
-TimeStamp = /51A74BFE;
+TimeStamp = /51A74BE2;
 Reference = S2;
 ValeurCmp = CONN_1;
 IdModule  = PIN_ARRAY_1;
 EndCmp
 
 BeginCmp
-TimeStamp = /51A74C00;
+TimeStamp = /51A74BFE;
 Reference = S3;
 ValeurCmp = CONN_1;
 IdModule  = PIN_ARRAY_1;
 EndCmp
 
 BeginCmp
-TimeStamp = /51A9A872;
+TimeStamp = /51A74C00;
 Reference = S4;
 ValeurCmp = CONN_1;
 IdModule  = PIN_ARRAY_1;
