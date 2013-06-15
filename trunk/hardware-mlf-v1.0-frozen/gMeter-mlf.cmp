@@ -1,136 +1,122 @@
-Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Tue 11 Jun 2013 03:14:27 PM NZST
+Cmp-Mod V01 Created by PcbNew date = Wed 12 Jun 2013 10:29:25 PM NZST
 
 BeginCmp
 TimeStamp = /4ED087A6;
 Reference = C1;
 ValeurCmp = 0u1;
-IdModule  = SM0603;
+IdModule  = SM0603_GRUVIN;
 EndCmp
 
 BeginCmp
 TimeStamp = /4ED087CB;
 Reference = C2;
 ValeurCmp = 22u;
-IdModule  = SM1206POL;
+IdModule  = SM1210_GRUVIN_POL;
 EndCmp
 
 BeginCmp
 TimeStamp = /4ECC4B64;
 Reference = C3;
 ValeurCmp = 18p;
-IdModule  = SM0603;
+IdModule  = SM0603_GRUVIN;
 EndCmp
 
 BeginCmp
 TimeStamp = /4ECC4B5C;
 Reference = C4;
 ValeurCmp = 18p;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /51A9B64C;
-Reference = C5;
-ValeurCmp = 0u1;
-IdModule  = SM0603;
+IdModule  = SM0603_GRUVIN;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A59;
 Reference = D1;
 ValeurCmp = Sctky;
-IdModule  = SM0603;
+IdModule  = SOD323_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A5F;
 Reference = D2;
 ValeurCmp = Sctky;
-IdModule  = SM0603;
+IdModule  = SOD323_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A33;
 Reference = D3;
 ValeurCmp = 3.6v Zen;
-IdModule  = SM1206POL;
+IdModule  = SOD323_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /4E912A4B;
 Reference = D4;
 ValeurCmp = 3.6v Zen;
-IdModule  = SM1206POL;
+IdModule  = SOD323_DIODE;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A74399;
 Reference = D5;
 ValeurCmp = RED;
-IdModule  = LED-1206;
+IdModule  = LED-1206_RED;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A7439C;
 Reference = D6;
 ValeurCmp = ORANGE;
-IdModule  = LED-1206;
+IdModule  = LED-1206_ORG;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A7439D;
 Reference = D7;
 ValeurCmp = ORANGE;
-IdModule  = LED-1206;
+IdModule  = LED-1206_ORG;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A7439F;
 Reference = D8;
 ValeurCmp = ORANGE';
-IdModule  = LED-1206;
+IdModule  = LED-1206_YEL;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743A0;
 Reference = D9;
 ValeurCmp = YELLOW;
-IdModule  = LED-1206;
+IdModule  = LED-1206_YEL;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743A2;
 Reference = D10;
 ValeurCmp = YELLOW;
-IdModule  = LED-1206;
+IdModule  = LED-1206_YEL;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743A4;
 Reference = D11;
 ValeurCmp = YELLOW;
-IdModule  = LED-1206;
+IdModule  = LED-1206_GREEN;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743A6;
 Reference = D12;
 ValeurCmp = GREEN;
-IdModule  = LED-1206;
+IdModule  = LED-1206_GREEN;
 EndCmp
 
 BeginCmp
 TimeStamp = /4ECC4939;
 Reference = IC1;
 ValeurCmp = ATMEGA88P;
-IdModule  = TQFP32;
-EndCmp
-
-BeginCmp
-TimeStamp = /51A749EA;
-Reference = K1;
-ValeurCmp = CONN_3;
-IdModule  = PIN_ARRAY_4x1;
+IdModule  = MLF-32_2mmVIA_SINK;
 EndCmp
 
 BeginCmp
@@ -155,9 +141,9 @@ IdModule  = OBO-1206C;
 EndCmp
 
 BeginCmp
-TimeStamp = /51A74549;
+TimeStamp = /51B6AE78;
 Reference = Q1;
-ValeurCmp = BC548;
+ValeurCmp = BC847C;
 IdModule  = SOT23-BCE;
 EndCmp
 
@@ -179,13 +165,6 @@ BeginCmp
 TimeStamp = /4E91296B;
 Reference = R3;
 ValeurCmp = 3K9;
-IdModule  = SM0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /51A74A68;
-Reference = R4;
-ValeurCmp = 2K2;
 IdModule  = SM0603;
 EndCmp
 
@@ -213,7 +192,7 @@ EndCmp
 BeginCmp
 TimeStamp = /51A7498E;
 Reference = R8;
-ValeurCmp = 5K1;
+ValeurCmp = 5K6;
 IdModule  = SM0603;
 EndCmp
 
@@ -274,45 +253,10 @@ IdModule  = SM0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /51A74BE2;
-Reference = S1;
-ValeurCmp = CONN_1;
-IdModule  = PIN_ARRAY_1;
-EndCmp
-
-BeginCmp
-TimeStamp = /51A74BFE;
-Reference = S2;
-ValeurCmp = CONN_1;
-IdModule  = PIN_ARRAY_1;
-EndCmp
-
-BeginCmp
-TimeStamp = /51A74C00;
-Reference = S3;
-ValeurCmp = CONN_1;
-IdModule  = PIN_ARRAY_1;
-EndCmp
-
-BeginCmp
-TimeStamp = /51A9A872;
-Reference = S4;
-ValeurCmp = CONN_1;
-IdModule  = PIN_ARRAY_1;
-EndCmp
-
-BeginCmp
-TimeStamp = /51A9B60C;
-Reference = U1;
-ValeurCmp = LN-6206-30;
-IdModule  = SOT89_GIO;
-EndCmp
-
-BeginCmp
 TimeStamp = /4ECC4B2B;
 Reference = X1;
 ValeurCmp = 12MHz;
-IdModule  = HC-49V;
+IdModule  = SMD_XTAL_ABM3;
 EndCmp
 
 EndListe
