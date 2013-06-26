@@ -4,6 +4,18 @@
 
 Some brief notes about the two board designs and their firmware, as well as the host system software, which communicates with the USB board.
 
+= Flashing Firmware =
+
+This board is designed to use a solder-less 'pogo-pin' programming connector. This is why the ISP programming pads have no holes. They are however laid out the same as the standard AVR 6-pin ISP header pins, with pin-1 indicated by the only square pad. I did this simply because I wanted the board to have a cleaner look, once ready for use.
+
+Here's my home made pogo-pin interface, using a clothes peg for spring-loading. The target board gets its ISP pads placed beneath the pogo pins, for programming.
+
+TODO: Add photo.
+
+The programmer in this photo is a USBasp compatible device -- the one we made for the G9X v4.x RC controller boards. But you can of course use any known working AVR programmer.
+
+If you want, you can surface-mount solder pins or wires, to get your programming done. A through-hole version of 3x2 pin header would probably work best, in this instance.
+
 = The Standard (larger) Board =
 
 The latest (development) firmware source files are located at [https://code.google.com/p/gmeter-usb/source/browse/#svn%2Ftrunk%2Ffirmware trunk/firmware]. You should check out the files with Subversion (svn), using the instructions on the main [https://code.google.com/p/gmeter-usb/source/checkout Source] page, from the menu above.
