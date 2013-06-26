@@ -191,7 +191,7 @@ main(int argc, char **argv)
         }
         printf("communications test succeeded\n");
 
-        printf("running LED and alarm test sequence ...");
+        printf("running LED and beeper test ...");
 
         int level;
         for(level=0; level < 10; level++)
@@ -215,7 +215,7 @@ main(int argc, char **argv)
         nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_ALARM, 
                             0/*wValue*/, 0 /*wIndex*/, (char *)buffer, sizeof(buffer), 5000);
 
-        printf("output test completed\n\n");
+        printf("test completed\n\n");
 
 
     } else if (strcmp(argv[1], "alarm") == 0) {
