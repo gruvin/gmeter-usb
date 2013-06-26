@@ -41,12 +41,34 @@ static uchar    replyBuf[2];
         replyBuf[1] = 0; /* TODO */
         return 2;
     }
-    if (rq->bRequest == 2) { /* Light 0 through 8 LEDs, according to supplied 'level' */
-        uchar level = rq->wIndex.bytes[0]; // level
-        setLEDs((1<<level)-1); // level=0 is all LEDs off -- level=3 is first 3 LEDs on, etc.
+    if (rq->bRequest == 2) { /* Set LED display 'level', 0,1,2 or 3. (If level > 3 level=3) */
+        uchar level = rq->wIndex.bytes[0] & 3;
+
+        switch (level)
+        {
+          case 0:
+            PORTB=8;
+            gAlarmOn = 0;
+            break;
+
+          case 1:
+            PORTB=12;
+            gAlarmOn = 0;
+            break;
+
+          case 2:
+            PORTB=14;
+            gAlarmOn = 0;
+            break;
+
+          case 3:
+            PORTB=15;
+            gAlarmOn = 1;
+            break;
+        }
         healthCounter = HEALTHCOUNTER_RESET_VALUE;
     }
-    if (rq->bRequest == 3) { /* Set audible alarm on (see main() loop)  */
+    if (rq->bRequest == 3) { /* Set audible alarm on PORTB[4] on (1) or off (0) */
       uchar alarmOn = rq->wIndex.bytes[0] & 1;
       gAlarmOn = alarmOn;
     }
@@ -65,76 +87,49 @@ static uchar    replyBuf[2];
 #define TIFR    TIFR0
 #endif
 
-void setLEDs(unsigned char leds)
-{
-  PORTD = (PORTD & ~0x20) | (leds & 0x01)<<5; // LED 1
-  PORTD = (PORTD & ~0x10) | (leds & 0x02)<<3; // LED 2
-  PORTC = (PORTC & ~0x20) | (leds & 0x04)<<3; // LED 3
-  PORTC = (PORTC & ~0x10) | (leds & 0x08)<<1; // LED 4
-  PORTC = (PORTC & ~0x08) | (leds & 0x10)>>1; // LED 5
-  PORTC = (PORTC & ~0x04) | (leds & 0x20)>>3; // LED 6
-  PORTC = (PORTC & ~0x02) | (leds & 0x40)>>5; // LED 7
-  PORTC = (PORTC & ~0x01) | (leds & 0x80)>>7; // LED 8
-}
-
 int
 main(void)
 {
     uchar   i;
     unsigned int j;
 
-    wdt_disable();
-
-    DDRB = 0x00; PORTB = 0x3f; // PORTB[2]=S4, [1]=S3, [0]=S2
-    DDRC = 0x3f; PORTC = 0x00; // PORTC[5:4:3:2:1:0]=LEDS[3:4:5:6:7:8]
-    DDRD = 0xb2; PORTD = 0x00; // PORTD[7]=BEEPER, [6]=S1, [5:4]=LEDS[1:2], [3]=D-, [2]D+, [1]=TX, [0]=RX 
+    wdt_enable(WDTO_1S);
+    odDebugInit();
+    
+    DDRB = 0x3f; PORTB = 0x00; // all outputs, reset to low
+    DDRC = 0x00; PORTC = 0x3f; // all inputs, pull-ups on
 
     /* Fake a physical disconnect for 500ms, in case we are resetting due to WDT event */
-    PORTD &= ~USBMASK; /* set both USB D+/D- to output (low/low) to force reset */
-    DDRD |= USBMASK;        
-
-/*
-    // DEBUG
-    PORTD |= 1<<7;
-    _delay_ms(1000);
-    PORTD &= ~(1<<7);
-*/
-    // Fancy reset LED sequence for eye candy/confidence (plus delay for USB reset)
-
-    for(i=1; i != 0 ; i<<=1)
-    {
-      setLEDs(i);
-      _delay_ms(100);
-    }
-    setLEDs(0);
-
-/* ... was USB reset delay
+    PORTD &= ~USBMASK;
+    DDRD |= USBMASK;        /* set both USB D+/D- to output (low/low) to force reset */
     for (i = 0; i < 250; i++) {
         wdt_reset();
         _delay_ms(2);
     }
-*/
-    _delay_ms(2000);
+    DDRD = 0x00;      // PORTD all inputs, including D+/D- 
+    PORTD = ~USBMASK; // PORTD all with pull-ups, except USB D+/D-
 
-    DDRD &= ~USBMASK; // D+/- set as inputs
-    
-    wdt_enable(WDTO_1S);
-    odDebugInit();
-    
+    // Fancy reset LED sequence for eye candy/confidence
+    for(i=8; i > 0; i >>= 1)
+    {
+      PORTB=i;
+      _delay_ms(250);
+    }
+    PORTB=0;
+
     TCCR0 = 5;  /* set prescaler to 1/1024 */
     usbInit();
-    
     sei();
     i = 0;
     for (;;) {    /* main event loop */
         wdt_reset();
         usbPoll();
         if (healthCounter && !(--i)) healthCounter--; // use i as a 256 count pre-scaler
-        if (!healthCounter) PORTD=PORTD & ~0x20; // indicate data time-out by turning off LED 1 (leave all others as they are)
+        if (!healthCounter) PORTB=PORTB & ~1;
         if (gAlarmOn)
-          PORTD=(PORTD & ~(1<<7)) | ((j-- & 0x8000) >> 8); // pulsating bepper
+          PORTB=(PORTB & ~(1<<4)) | ((j-- & 0x8000) >> 11); // pulsating alarm on PORTB[4]
         else
-          PORTD=PORTD & ~(1<<7); // beeper off
+          PORTB=PORTB & ~(1<<4); // alarm off
     }
     return 0;
 }

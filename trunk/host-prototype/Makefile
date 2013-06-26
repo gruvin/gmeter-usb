@@ -27,7 +27,7 @@ CC		= gcc
 CFLAGS	= $(USBFLAGS) -O -Wall
 LIBS	= $(USBLIBS)
 
-PROGRAM = gMeterControl$(EXE_SUFFIX)
+PROGRAM = tMeterControl$(EXE_SUFFIX)
 
 
 all: $(PROGRAM)
@@ -35,8 +35,8 @@ all: $(PROGRAM)
 .c.o:
 	$(CC) $(CFLAGS) -c $<
 
-$(PROGRAM): gMeterControl.o
-	$(CC) -o $(PROGRAM) gMeterControl.o $(LIBS)
+$(PROGRAM): tMeterControl.o
+	$(CC) -o $(PROGRAM) tMeterControl.o $(LIBS)
 
 strip: $(PROGRAM)
 	strip $(PROGRAM)
