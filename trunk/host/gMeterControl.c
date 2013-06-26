@@ -19,6 +19,7 @@ obtained from http://libusb.sourceforge.net/.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include <usb.h>    /* this is libusb, see http://libusb.sourceforge.net/ */
 
 #define USBDEV_SHARED_VENDOR    0x16C0  /* VOTI */
@@ -38,10 +39,9 @@ static void
 usage(char *name)
 {
     fprintf(stderr, "usage:\n");
-    fprintf(stderr, "  %s test\n", name);
-    fprintf(stderr, "  %s status -- not implememnted\n", name);
-    fprintf(stderr, "  %s value [0-3] -- set display/alarm value\n", name);
-    fprintf(stderr, "  %s alarm [on|off] -- set audible alarm\n", name);
+    fprintf(stderr, "  %s test -- runs a communications an LED/alarm test.\n", name);
+    fprintf(stderr, "  %s 0:1:2:3:4:5:6:7:8 [alarm] -- set LED level. Optionally turn on alarm.\n", name);
+    fprintf(stderr, "  %s alarm on:off -- set audible alarm.\n", name);
 }
 
 
@@ -189,19 +189,34 @@ main(int argc, char **argv)
                 exit(1);
             }
         }
-        printf("test succeeded\n");
+        printf("communications test succeeded\n");
 
-    } else if (strcmp(argv[1], "status") == 0) {
+        printf("running LED and alarm test sequence ...");
 
-        nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_GET, 
-                                  0, 0, (char *)buffer, sizeof(buffer), 5000);
-        if (nBytes < 2) {
-            if(nBytes < 0)
-                fprintf(stderr, "USB error: %s\n", usb_strerror());
-            fprintf(stderr, "only %d bytes status received\n", nBytes);
-            exit(1);
+        int level;
+        for(level=0; level < 10; level++)
+        {
+          if (level < 9)
+          {
+            printf(" %d", level); fflush(stdout);
+            nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_OUT, PSCMD_SET, 
+                                      0/*wValue*/, level/*wIndex*/, (char *)buffer, sizeof(buffer), 5000);
+          }
+          else
+          {
+            printf(" beep\n"); fflush(stdout);
+            nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_ALARM, 
+                                0/*wValue*/, 1 /*wIndex*/, (char *)buffer, sizeof(buffer), 5000);
+          }
+          usleep(250000);
         }
-        printf("Status=0x%4x\n", (buffer[0] + (buffer[1]<<8)));
+        nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_OUT, PSCMD_SET, 
+                                  0/*wValue*/, 0/*wIndex*/, (char *)buffer, sizeof(buffer), 5000);
+        nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_ALARM, 
+                            0/*wValue*/, 0 /*wIndex*/, (char *)buffer, sizeof(buffer), 5000);
+
+        printf("output test completed\n\n");
+
 
     } else if (strcmp(argv[1], "alarm") == 0) {
 
@@ -224,10 +239,17 @@ main(int argc, char **argv)
     } else { // assume an integer meter level has been provided
 
         int level;
+        long d;
         if (sscanf(argv[1], "%d", &level))
         {
           nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_OUT, PSCMD_SET, 
                                       0/*wValue*/, level/*wIndex*/, (char *)buffer, sizeof(buffer), 5000);
+          if (argc > 2 && strcmp(argv[2], "alarm") == 0)
+            nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_ALARM, 
+                                0/*wValue*/, 1 /*wIndex*/, (char *)buffer, sizeof(buffer), 5000);
+          else
+            nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_IN, PSCMD_ALARM, 
+                                0/*wValue*/, 0 /*wIndex*/, (char *)buffer, sizeof(buffer), 5000);
         } else {
             nBytes = 0;
             usage(argv[0]);
