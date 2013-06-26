@@ -239,7 +239,6 @@ main(int argc, char **argv)
     } else { // assume an integer meter level has been provided
 
         int level;
-        long d;
         if (sscanf(argv[1], "%d", &level))
         {
           nBytes = usb_control_msg(handle, USB_TYPE_VENDOR | USB_RECIP_DEVICE | USB_ENDPOINT_OUT, PSCMD_SET, 
