@@ -1,0 +1,55 @@
+#summary How to compile and use
+
+= Introduction =
+
+Some brief notes about the two board designs and their firmware, as well as the host system software, which communicates with the USB board.
+
+= The Standard (larger) Board =
+
+The latest (development) firmware source files are located at [https://code.google.com/p/gmeter-usb/source/browse/#svn%2Ftrunk%2Ffirmware trunk/firmware]. You should check out the files with Subversion (svn), using the instructions on the main [https://code.google.com/p/gmeter-usb/source/checkout Source] page, from the menu above.
+
+The firmware I use is compiled under AVR-GCC v4.7.2, on an Apple Mac, running OS X 10.8.3 (Mountain Lion). But it should compile equally fine under AVR-GCC on any other platform, too.
+
+On a Unix system, assuming you have AVR-GC installed, compiling is a simple matter of ...
+{{{
+$ cd gmeter-usb/firmware
+$ make
+}}}
+
+I have no idea how that is done under Windows. But I'd assume it's very similar.
+
+You will need to set the 'fuses' in a brand new ATmega88P on your board. You can do this from the `firmware` directory as follows ...
+
+{{{
+$ . wfuses
+}}}
+
+I use bash as my shell, so that dot (.) tells bash to 'source' the contents of the file wfuses and execute the commands there-in. Here's what is in wfuses ...
+
+{{{
+avrdude -c usbasp -P usb -p atmega88p -B8 -u -U lfuse:w:0xf7:m -U hfuse:w:0xd5:m
+# -U efuse:w:0xf9:m
+}}}
+
+I commented out the efuse setting, because it always fails verification with my version of AVRDUDE. However, I do program it at least once, ignoring the verification error, before commenting it out. Perhaps you'll have better luck. 
+
+The -B8 is required to slow down the programmer, so it will work with the factory default internal oscillator in the chip, because the external 12.0MHz crystal oscillator is not enabled until the fuse settings are programming.
+
+To flash the firmware code into the ATmega88P, there's a similar process, using the file wflash ...
+
+{{{
+$ . wflash
+}}}
+
+*If you're using Windows* and prefer to use the Atmel AVR Studio suite to set the fuses and burn the Flash, then by all means go ahead.
+
+
+= The MLF (compact) Board =
+
+Not yet built. Firmware not yet written -- although it will be almost identical to the standard version -- just minus any BlueTooth serial port code, which doesn't exist in the standard version either at the time of this writing.
+
+Fuse and Flash programming will be the same as for the standard board, as noted above.
+
+= The Host Software gMeterControl =
+
+TODO
