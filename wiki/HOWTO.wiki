@@ -20,16 +20,15 @@ Here's my home made pogo-pin interface, using a clothes peg for spring-loading. 
 
 [http://gmeter-usb.googlecode.com/svn/wiki/home.attach/pogo-isp.jpg]
 
-The pogo pins are soldered to a small carrier PCB, then glued to the clothes peg. (Wooden pegs work best. I didn't have any.) The programmer in the photo is a [https://code.google.com/p/gruvin9x/wiki/GProg gProg]/USBasp device -- the one we made for the G9X v4.x RC controller boards. But you can use any known working AVR programmer. 
+The 0.68mm pogo pins fit into standard 0.8mm PCB holes, for soldering. You can plug the standard 6-hole ISP socket directly over the upper, protruding pogo pin barrels, like my [https://code.google.com/p/gruvin9x/wiki/GProg gProg] device is connected in the photo above. 
 
-Pogo pins are spring loaded pins, with a sharp point. They resemble miniature shock absorbers.
-I bought mine on eBay. Just search, "pogo pins" to find 0.68mm versions. A matching description might read something like, "10pcs P50-B1 Dia 0.68mm Length 16mm 75g Spring Test Probe Pogo Pin".
+The pogo pins are soldered to a small carrier PCB, then glued to the clothes peg. (Wooden pegs work best. But I didn't have any.) The far end of the clothes peg is depressed to lift the pogo pins and release the PCB. The peg's spring tension seems about right to match the springs of six pogo pins, though it really isn't very critical.
+
+Pogo pins are individually spring loaded, usually with a sharp point and sort of resemble miniature shock absorbers. I bought mine on eBay, by searching "pogo pins", to find 0.68mm versions. The full description was, "10pcs P50-B1 Dia 0.68mm Length 16mm 75g Spring Test Probe Pogo Pin".
 
 [http://gmeter-usb.googlecode.com/svn/wiki/home.attach/pogo-pins.jpg]
 
-The 0.68mm pogo pins fit into standard 0.8mm PCB holes, for soldering. You can actually plug the standard 6-hole ISP socket directly over the upper, protruding pogo pins, instead of the messy ribbon cable, shown in the photo above.
-
-If you want, you can surface-mount solder pins or wires, to get your programming done. A through-hole version of 3x2 pin header would probably work best, in this instance.
+Instead of setting up a solderless pogo-pin system, you could simply surface-mount-solder a 3x2 pin array or wires to the gMeter PCB pads. A through-hole version of 3x2 pin header would probably work best in this instance.
 
 = The Standard (larger) gMeter Board =
 
