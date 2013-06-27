@@ -1,5 +1,5 @@
-update=27/06/2013 18:42:10
-last_client=eeschema
+update=Thu 27 Jun 2013 07:07:18 PM NZST
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -42,8 +42,6 @@ LibName13=dip_sockets
 LibName14=pga_sockets
 LibName15=valves
 LibName16=share/modules/gruvin
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -84,3 +82,5 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=share/library/npn-bce
+[general]
+version=1
