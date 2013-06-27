@@ -1,4 +1,4 @@
-#summary How to compile and use
+#summary How to compile firmware, host control software and use the gMeter
 
 = Introduction =
 
@@ -14,23 +14,9 @@ In the meantime, here are some quick notes to help get gMeter working quickly.
 
 = Flashing Firmware =
 
-This board is designed to use a solder-less 'pogo-pin' programming connector. This is why the ISP programming pads have no holes. They are however laid out the same as the standard AVR 6-pin ISP header pins, with pin-1 indicated by the only square pad. I did this simply because I wanted the board to have a cleaner look, once ready for use.
 
-Here's my home made pogo-pin interface, using a clothes peg for spring-loading. The target board gets its ISP pads placed beneath the pogo pins, for programming.
 
-[http://gmeter-usb.googlecode.com/svn/wiki/home.attach/pogo-isp.jpg]
-
-The 0.68mm pogo pins fit into standard 0.8mm PCB holes, for soldering. You can plug the standard 6-hole ISP socket directly over the upper, protruding pogo pin barrels, like my [https://code.google.com/p/gruvin9x/wiki/GProg gProg] device is connected in the photo above. 
-
-The pogo pins are soldered to a small carrier PCB, then glued to the clothes peg. (Wooden pegs work best. But I didn't have any.) The far end of the clothes peg is depressed to lift the pogo pins and release the PCB. The peg's spring tension seems about right to match the springs of six pogo pins, though it really isn't very critical.
-
-Pogo pins are individually spring loaded, usually with a sharp point and sort of resemble miniature shock absorbers. I bought mine on eBay, by searching "pogo pins", to find 0.68mm versions. The full description was, "10pcs P50-B1 Dia 0.68mm Length 16mm 75g Spring Test Probe Pogo Pin".
-
-[http://gmeter-usb.googlecode.com/svn/wiki/home.attach/pogo-pins.jpg]
-
-Instead of setting up a solderless pogo-pin system, you could simply surface-mount-solder a 3x2 pin array or wires to the gMeter PCB pads. A through-hole version of 3x2 pin header would probably work best in this instance.
-
-= The Standard (larger) gMeter Board =
+== The Standard (larger) gMeter Board ==
 
 <img src="http://gmeter-usb.googlecode.com/svn/wiki/home.attach/gMeter-std-first-build.png" width="320">
 
@@ -78,7 +64,7 @@ Obviously, you need to change the `-c usbasp` to match the type of programmer yo
 
 *If you're using Windows* and prefer to use the Atmel AVR Studio suite to set the fuses and burn the Flash, then by all means go ahead.
 
-= An ATmega48 Will Also Work =
+=== An ATmega48 Will Also Work ===
 
 At the time of writing, the Flash and RAM usage for the firmware is as follows ...
 {{{
@@ -88,13 +74,13 @@ RAM: 52 bytes
 
 That means you can easily use the smaller capacity ATmega48 chip (4K Flash), should they happen to be more readily available. I plan to use a '48 from my stock for the compact MLF version, below.
  
-= The MLF (compact) gMeter Board =
+== The MLF (compact) gMeter Board ==
 
 Not yet built. Firmware not yet written -- although it will be almost identical to the standard version -- just minus any BlueTooth serial port code, which doesn't exist in the standard version either at the time of this writing.
 
 Fuse and Flash programming will be the same as for the standard board, as noted above.
 
-= The Host Software gMeterControl =
+== The Host Software gMeterControl ==
 
 Communicating with the gMeter via USB requires the `libusb` libraries to be installed on the host system. These are available at [http://libusb.org]. (I might even be relying on the legacy ​libusb-compat version? Not entirely sure. I have both installed, in any case.)
 
