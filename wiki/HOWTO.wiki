@@ -4,19 +4,36 @@
 
 Some brief notes about the two board designs and their firmware, as well as the host system software, which communicates with the USB board.
 
+= V-USB from Objective Development =
+
+This project was made possible through the excellent [http://www.obdev.at/products/vusb/index.html V-USB project], from Objective Development. 
+
+There, you will find all the documentation and example projects needed to fully understand the code here-in and to make your own USB capable 8-bit micro projects. 
+
+In the meantime, here are some quick notes to help get gMeter working quickly.
+
 = Flashing Firmware =
 
 This board is designed to use a solder-less 'pogo-pin' programming connector. This is why the ISP programming pads have no holes. They are however laid out the same as the standard AVR 6-pin ISP header pins, with pin-1 indicated by the only square pad. I did this simply because I wanted the board to have a cleaner look, once ready for use.
 
 Here's my home made pogo-pin interface, using a clothes peg for spring-loading. The target board gets its ISP pads placed beneath the pogo pins, for programming.
 
-TODO: Add photo.
+[http://gmeter-usb.googlecode.com/svn/wiki/home.attach/pogo-isp.jpg]
 
-The programmer in this photo is a USBasp compatible device -- the one we made for the G9X v4.x RC controller boards. But you can of course use any known working AVR programmer.
+The pogo pins are soldered to a small carrier PCB, then glued to the clothes peg. (Wooden pegs work best. I didn't have any.) The programmer in the photo is a [https://code.google.com/p/gruvin9x/wiki/GProg gProg]/USBasp device -- the one we made for the G9X v4.x RC controller boards. But you can use any known working AVR programmer. 
+
+Pogo pins are spring loaded pins, with a sharp point. They resemble miniature shock absorbers.
+I bought mine on eBay. Just search, "pogo pins" to find 0.68mm versions. A matching description might read something like, "10pcs P50-B1 Dia 0.68mm Length 16mm 75g Spring Test Probe Pogo Pin".
+
+[http://gmeter-usb.googlecode.com/svn/wiki/home.attach/pogo-pins.jpg]
+
+The 0.68mm pogo pins fit into standard 0.8mm PCB holes, for soldering. You can actually plug the standard 6-hole ISP socket directly over the upper, protruding pogo pins, instead of the messy ribbon cable, shown in the photo above.
 
 If you want, you can surface-mount solder pins or wires, to get your programming done. A through-hole version of 3x2 pin header would probably work best, in this instance.
 
-= The Standard (larger) Board =
+= The Standard (larger) gMeter Board =
+
+<img src="http://gmeter-usb.googlecode.com/svn/wiki/home.attach/gMeter-std-first-build.png" width="320">
 
 The latest (development) firmware source files are located at [https://code.google.com/p/gmeter-usb/source/browse/#svn%2Ftrunk%2Ffirmware trunk/firmware]. You should check out the files with Subversion (svn), using the instructions on the main [https://code.google.com/p/gmeter-usb/source/checkout Source] page, from the menu above.
 
@@ -43,9 +60,9 @@ avrdude -c usbasp -P usb -p atmega88p -B8 -u -U lfuse:w:0xf7:m -U hfuse:w:0xd5:m
 # -U efuse:w:0xf9:m
 }}}
 
-I commented out the efuse setting, because it always fails verification with my version of AVRDUDE. However, I do program it at least once, ignoring the verification error, before commenting it out. Perhaps you'll have better luck. 
+I commented out the efuse setting, because it always fails verification with my version of AVRDUDE. However, I do program it at least once, ignoring the verification error, before doing that. Perhaps you'll have better luck with AVR Studio, under Windows?
 
-The -B8 is required to slow down the programmer, so it will work with the factory default internal oscillator in the chip, because the external 12.0MHz crystal oscillator is not enabled until the fuse settings are programming.
+The -B8 argument is required to slow down the programmer, so it will work with the factory default internal oscillator in the chip, because the external 12.0MHz crystal oscillator is not enabled until the fuse settings are programming. Once the 12MHz oscillator is running, you don't need to -B8 any more.
 
 To flash the firmware code into the ATmega88P, there's a similar process, using the file wflash ...
 
@@ -53,10 +70,26 @@ To flash the firmware code into the ATmega88P, there's a similar process, using 
 $ . wflash
 }}}
 
+That file contains ...
+{{{
+avrdude -c usbasp -P usb -p atmega88p -U flash:w:main.hex
+}}}
+
+Obviously, you need to change the `-c usbasp` to match the type of programmer you are actually using.
+
 *If you're using Windows* and prefer to use the Atmel AVR Studio suite to set the fuses and burn the Flash, then by all means go ahead.
 
+= An ATmega48 Will Also Work =
 
-= The MLF (compact) Board =
+At the time of writing, the Flash and RAM usage for the firmware is as follows ...
+{{{
+ROM: 1878 bytes (data=2)
+RAM: 52 bytes
+}}}
+
+That means you can easily use the smaller capacity ATmega48 chip (4K Flash), should they happen to be more readily available. I plan to use a '48 from my stock for the compact MLF version, below.
+ 
+= The MLF (compact) gMeter Board =
 
 Not yet built. Firmware not yet written -- although it will be almost identical to the standard version -- just minus any BlueTooth serial port code, which doesn't exist in the standard version either at the time of this writing.
 
@@ -64,4 +97,40 @@ Fuse and Flash programming will be the same as for the standard board, as noted 
 
 = The Host Software gMeterControl =
 
-TODO
+Communicating with the gMeter via USB requires the `libusb` libraries to be installed on the host system. These are available at [http://libusb.org]. (I might even be relying on the legacy ​libusb-compat version? Not entirely sure. I have both installed, in any case.)
+
+Windows is an issue. Apparently, you need a custom made driver DLL file for each `libusb` device. There are tools, somewhere, to get that done. Apparently, you can just put your custom DLL file in the same folder as the host control program -- gMeterControl.exe in this case. I do not use Windows, so I have not been down that path. Nor do I have any experience using GCC under Windows for creating command line executables, though I've seen it can be easily done.
+
+Those issues aside, building the gMeterControl program under a Unix style OS should be as simple as ...
+
+{{{
+$ cd trunk/host
+$ make
+}}}
+
+*GCC Version*: I'm using the Apple supplied GCC/LLVM v4.2.1 on my Mac and GCC v4.6.3 on Ubuntu and Debian Squeeze on the Raspberry Pi. No differences in coding are required between these versions.
+
+The program will output usage hints, if run without any command line arguments ...
+{{{
+$ ./gMeterControl 
+usage:
+  ./gMeterControl test -- runs a communications an LED/alarm test.
+  ./gMeterControl 0:1:2:3:4:5:6:7:8 [alarm] -- set LED level. Optionally turn on alarm.
+  ./gMeterControl alarm on:off -- set audible alarm.
+}}}
+
+So for example, if you want to have the gMeter light up its lower 5 LEDs and sound the alarm ...
+{{{
+$ ./gMeterControl 5 alarm
+}}}
+
+You can either send the same command, omitting '`alarm`' to silence the alarm or run ...
+{{{
+$ ./gMeterControl alarm off
+}}}
+
+Running `gMeterControl test`, will thoroughly test USB communications and then run a sequence of LEDs and a "beep", assuming everything is working right.
+
+NOTE: On my Apple MAC, running OX 10.8.3, it seems to take gMeterControl (`usblib`, actually) a second or more to find the gMeter USB device. However, under Ubuntu Linux and on a Raspberry Pi, the command completes seemingly instantly. I have no idea why the Apple system is slower.
+
+If you wanted to use the gMeter to display rapidly changing data,  I would suggest custom writing the host control program for the purpose, such that the device is opened just once and then sent multiple commands rapidly, before finally getting close at program exit.
