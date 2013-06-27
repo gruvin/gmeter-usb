@@ -1,6 +1,6 @@
-PCBNEW-BOARD Version 2 date 27/06/2013 18:34:12
+PCBNEW-BOARD Version 2 date Thu 27 Jun 2013 07:05:21 PM NZST
 
-# Created by Pcbnew(2013-05-31 BZR 4019)-stable
+# Created by Pcbnew(2013-mar-13)-testing
 
 $GENERAL
 encoding utf-8
@@ -9,8 +9,8 @@ LayerCount 2
 EnabledLayers 1FFF8001
 Links 83
 NoConn 0
-Di 39.40048 19.57578 71.048881 122.250201
-Ndraw 5
+Di 39.40048 19.57578 82.189829 122.250201
+Ndraw 6
 Ntrack 390
 Nzone 0
 BoardThickness 1.6002
@@ -2419,8 +2419,13 @@ Ro 0 0 -90
 $EndSHAPE3D
 $EndMODULE LED-1206_RED
 $TEXTPCB
-Te "gMeter v1.0"
-Po 43.8 111.1 0.8 0.9 0.2 900
+Te "gmeter-usb.googlecode.com"
+Po 65.6 57.5 1.524 2.032 0.3048 900
+De 20 0 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "gMeter v1.1"
+Po 63.3 44.9 0.8 0.9 0.2 900
 De 20 0 0 Normal
 $EndTEXTPCB
 $DRAWSEGMENT
