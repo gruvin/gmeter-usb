@@ -8,6 +8,10 @@ The project files are in trunk/hardware.
 
 There are two project files, once for the standard (larger) size gMeter (`gMeter.pro`) and one for the smaller version, using the MLF ATmega chip (`gMeter-MLF.pro`).
 
+== Bill of Mterial (BOM) File ==
+
+An (incomplete at time of writing) bill of materials (BOM) Excel spreadsheet file is located at `trunk/hardware/gmeter-bom.xlsx`.
+
 == PDF Schematic and Parts Placement Guides ==
 
 There are PDF versions of the circuit schematics and part placement guide (top layer silk screen) at [https://code.google.com/p/gmeter-usb/source/browse/#svn%2Ftrunk%2Fhardware%2Fassembly trunk/hardware/assembly].
