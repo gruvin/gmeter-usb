@@ -8,7 +8,7 @@ The project files are in trunk/hardware.
 
 There are two project files, once for the standard (larger) size gMeter (`gMeter.pro`) and one for the smaller version, using the MLF ATmega chip (`gMeter-MLF.pro`).
 
-I will be placing PDf versions of the schematics and part placement guides here in the wiki, soon.
+I will be placing PDF versions of the schematics and part placement guides here in the wiki, soon.
 
 == Production Gerber and Drill Files ==
 
