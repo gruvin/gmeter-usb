@@ -1,10 +1,49 @@
-update=Wed 12 Jun 2013 10:34:36 PM NZST
-last_client=kicad
+update=27/06/2013 18:42:10
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
+[pcbnew]
+version=1
+LastNetListRead=tMeter-mlf.net
+UseCmpFile=1
+PadDrill="    2.000000"
+PadDrillOvalY="    2.000000"
+PadSizeH="    3.200000"
+PadSizeV="    3.200000"
+PcbTextSizeV="    1.500000"
+PcbTextSizeH="    1.500000"
+PcbTextThickness="    0.300000"
+ModuleTextSizeV="    1.000000"
+ModuleTextSizeH="    1.000000"
+ModuleTextSizeThickness="    0.150000"
+SolderMaskClearance="    0.000000"
+SolderMaskMinWidth="    0.000000"
+DrawSegmentWidth="    0.150000"
+BoardOutlineThickness="    0.100000"
+ModuleOutlineThickness="    0.150000"
+[pcbnew/libraries]
+LibDir=share/modules
+LibName1=sockets
+LibName2=connect
+LibName3=discret
+LibName4=pin_array
+LibName5=divers
+LibName6=smd_capacitors
+LibName7=smd_resistors
+LibName8=smd_crystal&oscillator
+LibName9=smd_transistors
+LibName10=libcms
+LibName11=display
+LibName12=led
+LibName13=dip_sockets
+LibName14=pga_sockets
+LibName15=valves
+LibName16=share/modules/gruvin
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -45,42 +84,3 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=share/library/npn-bce
-[pcbnew]
-version=1
-LastNetListRead=tMeter-mlf.net
-UseCmpFile=1
-PadDrill="    2.000000"
-PadDrillOvalY="    2.000000"
-PadSizeH="    3.200000"
-PadSizeV="    3.200000"
-PcbTextSizeV="    1.500000"
-PcbTextSizeH="    1.500000"
-PcbTextThickness="    0.300000"
-ModuleTextSizeV="    1.000000"
-ModuleTextSizeH="    1.000000"
-ModuleTextSizeThickness="    0.150000"
-SolderMaskClearance="    0.000000"
-SolderMaskMinWidth="    0.000000"
-DrawSegmentWidth="    0.150000"
-BoardOutlineThickness="    0.100000"
-ModuleOutlineThickness="    0.150000"
-[pcbnew/libraries]
-LibDir=share/modules
-LibName1=sockets
-LibName2=connect
-LibName3=discret
-LibName4=pin_array
-LibName5=divers
-LibName6=smd_capacitors
-LibName7=smd_resistors
-LibName8=smd_crystal&oscillator
-LibName9=smd_transistors
-LibName10=libcms
-LibName11=display
-LibName12=led
-LibName13=dip_sockets
-LibName14=pga_sockets
-LibName15=valves
-LibName16=share/modules/gruvin
-[general]
-version=1
