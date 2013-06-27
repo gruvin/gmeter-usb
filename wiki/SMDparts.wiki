@@ -1,4 +1,4 @@
-#summary Soldering SMD parts
+#summary Soldering SMD parts is easier than you think!
 
 = Soldering SMD Parts -- It's EASY =
 == No, really! ==
