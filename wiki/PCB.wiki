@@ -8,15 +8,17 @@ The project files are in trunk/hardware.
 
 There are two project files, once for the standard (larger) size gMeter (`gMeter.pro`) and one for the smaller version, using the MLF ATmega chip (`gMeter-MLF.pro`).
 
-I will be placing PDF versions of the schematics and part placement guides here in the wiki, soon.
+== PDF Schematic and Parts Placement Guides ==
 
-== Production Gerber and Drill Files ==
-
-These can be found in `trunk/hardware/production` and `production-mlf`.
+There are PDF versions of the circuit schematics and part placement guide (top layer silk screen) in the [https://code.google.com/p/gmeter-usb/source/browse/#svn%2Ftrunk%2Fhardware%2Fassembly `hardware/assembly` folder].
 
 == Frozen PCB Files ==
 
 When I submit an order to the factor, I take an archive copy of the PCB files for that version. Two of these exist at the time of this writing, in trunk: `hardware-v1.0_frozen` and `hardware-mlf-v1.0_frozen`. These files should never be changed.
+
+== Production Gerber and Drill Files ==
+
+These can be found in the frozen archive folders (see above) in, sub-folders`production` and `production-mlf`.
 
 == Why not Eagle from CADsoft? ==
 
