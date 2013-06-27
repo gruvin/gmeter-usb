@@ -10,7 +10,7 @@ There are two project files, once for the standard (larger) size gMeter (`gMeter
 
 == PDF Schematic and Parts Placement Guides ==
 
-There are PDF versions of the circuit schematics and part placement guide (top layer silk screen) in the [https://code.google.com/p/gmeter-usb/source/browse/#svn%2Ftrunk%2Fhardware%2Fassembly `hardware/assembly` folder].
+There are PDF versions of the circuit schematics and part placement guide (top layer silk screen) at [https://code.google.com/p/gmeter-usb/source/browse/#svn%2Ftrunk%2Fhardware%2Fassembly trunk/hardware/assembly].
 
 == Frozen PCB Files ==
 
