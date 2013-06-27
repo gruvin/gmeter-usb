@@ -1,4 +1,4 @@
-#summary PCB Design using KiCAD
+#summary Schematic and PCB design using KiCAD
 
 = KiCAD Schematic and PCB Design Software =
 
