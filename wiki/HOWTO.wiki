@@ -124,7 +124,7 @@ So for example, if you want to have the gMeter light up its lower 5 LEDs and sou
 $ ./gMeterControl 5 alarm
 }}}
 
-You can either send the same command, omitting '`alarm`' to silence the alarm or run ...
+To silence the alarm, you can either send the same command, omitting '`alarm`'  or run ...
 {{{
 $ ./gMeterControl alarm off
 }}}
