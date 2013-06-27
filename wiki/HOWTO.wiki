@@ -141,10 +141,14 @@ For ten long years, I believed soldering tiny SMD parts -- especially those litt
 
 But nothing could be further from the truth! 
 
-Go to YouTube and watch the many how-to videos. Look especially for, "drag soldering" used on 0.5mm pith parts. You won't believe how easy it is to handle 100-pin, 0.5mm pitch ATmega2560's, for example! Here's a clue for you -- it's all about flux -- modern, clear liquid flux! (And desolder braid, when you're starting out. ;-) Modern flux and hand soldering technique changes EVERYTHING and in ways I could not imagine until I saw it and did it for myself. Now, I can effortlessly, confidently handle ANY SMD parts. you can to. Just dare to believe and get studying. `*wink*`
+Go to YouTube and watch the many how-to videos. Look especially for, "drag soldering" used on 0.5mm pitch parts. You won't believe how easy it is to handle 100-pin, 0.5mm pitch ATmega2560's, for example! 
 
 Honestly, I now far prefer working with SMD than any through-hole, ancient junk. I find it faster, far more convenient and the final results look way prettier.
 
+Here's a clue for you -- it's all about flux -- modern, clear liquid flux! (And desolder braid, when you're starting out. ;-) Modern flux and hand soldering technique changes EVERYTHING and in ways I could not imagine until I saw it and did it for myself. Now, I can effortlessly, confidently handle ANY SMD parts. You can too. Just dare to believe and get studying. `*wink*`
+
+A little vacuum pump hand tool for picking up and placing tiny SMD parts is a great idea, too. These are available from China, on eBay. They're something like a converted aquarium pump, I guess with the one-way valves reversed.
+ 
 The only small catch is the general need for a printed circuit board. But you can now get full production quality, multi-layer, dirt cheap circuit boards from the likes of [http://iteadstudio.com ITead Studio] in Shenzhen, China. They call it a, "PCB prototyping service" -- but be fooled. It's not the half baked nonsense you find closer to home. 
 
 For example, I got ten (minimum quantity) of these gMeter boards for less than USD$45, delivered. (It's even cheaper to get standard green mask boards and there's the option to go gold plated ($20 extra) if you want.) It takes about 15 days from time of order to boards on my doorstep, in Auckland, New Zealand. Also, shipping from China is cheaper to anywhere than from the USA to just about anywhere -- even internally, it seems!
