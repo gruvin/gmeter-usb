@@ -133,3 +133,26 @@ Running `gMeterControl test`, will thoroughly test USB communications and then r
 NOTE: On my Apple MAC, running OX 10.8.3, it seems to take gMeterControl (`usblib`, actually) a second or more to find the gMeter USB device. However, under Ubuntu Linux and on a Raspberry Pi, the command completes seemingly instantly. I have no idea why the Apple system is slower.
 
 If you wanted to use the gMeter to display rapidly changing data,  I would suggest custom writing the host control program for the purpose, such that the device is opened just once and then sent multiple commands rapidly, before finally getting close at program exit.
+
+= Soldering SMD Parts -- It's EASY =
+== No, really! ==
+
+For ten long years, I believed soldering tiny SMD parts -- especially those little pins on microprocessors -- was all but impossible to do by hand.  Frankly, I gave up my love of hobby electronics in disgust.
+
+But nothing could be further from the truth! 
+
+Go to YouTube and watch the many how-to videos. Look especially for, "drag soldering" used on 0.5mm pith parts. You won't believe how easy it is to handle 100-pin, 0.5mm pitch ATmega2560's, for example! Here's a clue for you -- it's all about flux -- modern, clear liquid flux! (And desolder braid, when you're starting out. ;-) Modern flux and hand soldering technique changes EVERYTHING and in ways I could not imagine until I saw it and did it for myself. Now, I can effortlessly, confidently handle ANY SMD parts. you can to. Just dare to believe and get studying. `*wink*`
+
+Honestly, I now far prefer working with SMD than any through-hole, ancient junk. I find it faster, far more convenient and the final results look way prettier.
+
+The only small catch is the general need for a printed circuit board. But you can now get full production quality, multi-layer, dirt cheap circuit boards from the likes of [http://iteadstudio.com ITead Studio] in Shenzhen, China. They call it a, "PCB prototyping service" -- but be fooled. It's not the half baked nonsense you find closer to home. 
+
+For example, I got ten (minimum quantity) of these gMeter boards for less than USD$45, delivered. (It's even cheaper to get standard green mask boards and there's the option to go gold plated ($20 extra) if you want.) It takes about 15 days from time of order to boards on my doorstep, in Auckland, New Zealand. Also, shipping from China is cheaper to anywhere than from the USA to just about anywhere -- even internally, it seems!
+
+There is also the option of making your own boards, at least in the "real" prototyping stage. There is excellent toner transfer paper and the like available these days. Personally though, I just don't bother. I prototype on something like an Arduino or some other pre-existing AVR platform (in this case) and just wait for the high quality boards to arrive from China.
+
+Oh -- to order PCBs, you need to provide "Gerber" files. Do NOT use those silly proprietary programs, that lock to into a single, hellish expensive board supplier (EasyPCB etc.) I use KiCAD -- it's free and has no limitations of size, hole count, etc. There's Eagle for smaller boards, but I got burned when I started maker larger boards, where it then becomes far too costly for the hobbyist, in my opinion - and you can't export to free programs. There's also the gEDA suite (free) and the now very nicely priced and very powerful AutoTrax DEX 2012, available for at most US$150 -- with no size limitations. 
+
+ALL of those options will free you to generate industry standard Gerber files, for use at any factory of your choosing.
+
+It's a whole new world out there folks. :P
