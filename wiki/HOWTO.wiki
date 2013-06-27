@@ -141,7 +141,7 @@ For ten long years, I believed soldering tiny SMD parts -- especially those litt
 
 But nothing could be further from the truth! 
 
-Go to YouTube and watch the many how-to videos. Look especially for, "drag soldering" used on 0.5mm pitch parts. You won't believe how easy it is to handle 100-pin, 0.5mm pitch ATmega2560's, for example! 
+Go to YouTube and watch the many how-to videos. Look especially for, "drag soldering" used on 0.5mm pitch parts. You won't believe how easy it is to handle 100-pin, 0.5mm pitch ATmega2560's, for example! Believe it or not, you want a bigger, fatter soldering iron tip for this! Intrigued? Read on ... 
 
 Honestly, I now far prefer working with SMD than any through-hole, ancient junk. I find it faster, far more convenient and the final results look way prettier.
 
