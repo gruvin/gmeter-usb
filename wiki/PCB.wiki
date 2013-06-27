@@ -1,0 +1,23 @@
+#summary PCB Design using KiCAD
+
+= KiCAD Schematic and PCB Design Software =
+
+The gMeter circuit schematic and PCB design is done in free and open source, KiCAD software. KiCAD is available free of charge for Windows, Linux and MacOS X. However, I have not had much success with the OS X version, so I run the Linux version, under a VMWare virtual machine Ubuntu Desktop v12.04 LTS. (The Windows version is also very stable and works well.)
+
+The project files are in trunk/hardware.
+
+There are two project files, once for the standard (larger) size gMeter (`gMeter.pro`) and one for the smaller version, using the MLF ATmega chip (`gMeter-MLF.pro`).
+
+I will be placing PDf versions of the schematics and part placement guides here in the wiki, soon.
+
+== Production Gerber and Drill Files ==
+
+These can be found in `trunk/hardware/production` and `production-mlf`.
+
+== Frozen PCB Files ==
+
+When I submit an order to the factor, I take an archive copy of the PCB files for that version. Two of these exist at the time of this writing, in trunk: `hardware-v1.0_frozen` and `hardware-mlf-v1.0_frozen`. These files should never be changed.
+
+== Why not Eagle from CADsoft? ==
+
+I get asked this a lot. The answer is simple; "Because it's not open source and this is an open source project."
