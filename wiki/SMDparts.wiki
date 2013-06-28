@@ -81,9 +81,19 @@ Another hard-learned solder paste hint -- don't bother messing about with hot ai
 
 *Hint 14*: So called, "NO CLEAN" solder paste is so named, not because you don't need to clean the residue flux/lacquer, but because you CANNOT clean it away! It is designed to remain on the board, as a protective layer, forever. Frankly, I hate the stuff. It's fine for quick repair work, perhaps. But it's messy, compared to proper, full immersion washed boards, using normal, washable flux. I would never use it for a scratch build. Yucky. 
 
-Note however that the NO CLEAN stuff has a long shelf life and is prolific in the catalogues of most every electronics retailer. Don't buy it! The good stuff "needs" to be shipped on ice, over 48 hours maximum -- or so they say. I put "needs" in quotes because in reality, paste dispensing syringes, with their intrinsically well air-sealed containers will easily last six months in your refrigerator, if not for a couple years, as they have in my case. OK, maybe not for stringent and consistent mass production applications. But more than good enough for us home hobbyists. NO CLEAN = BAD, IMHO.
- 
+Note however that the NO CLEAN stuff has a long shelf life and is prolific in the catalogues of most every electronics retailer. Don't buy it! The good stuff "needs" to be shipped on ice, over 48 hours maximum -- or so they say. I put "needs" in quotes because in reality, paste dispensing syringes, with their intrinsically well air-sealed containers will easily last six months in your refrigerator, if not for a couple years, as they have in my case. OK, maybe not for stringent and consistent mass production applications. But more than good enough for us home hobbyists. (The much feared problem is potential oxidation, as well as the usual drying up over time for the stuff in lidded pots.) NO CLEAN = BAD, IMHO.
+
+Mine had to come 2,000KM's from Australia and pass through customs by some expensive "urgent" B.S. It arrived well and truly up to room temp, in the middle of summer. I damn near had to sign my soul away before they'd even ship it that distance. But it was fine and still is.
+
 *Hint 15*:
+Actually, I hardly ever use paste these days, because I've gotten so fast with the soldering iron and other tools -- though for doing multiple boards in the oven, it's usually faster in the end. The 0.3mm solder wire (which I ended up getting from the opposite side of the globe, since it's so damned rare in these parts!) really made a big difference. Even 0.5mm is too thick. You just get too much solder on everything. It's OK, I  guess. But it generally just makes for an unsightly, blobby mess. Less is definitely more, when it comes to SMD soldering.
+ 
+*Hint 16*:
+Printed circuit boards with HASL (hot air solder levelled) finish will always have too much solder already on the pads of 0.5mm pitch modules. So solder paste, even applied with a decent, stainless steel stencil, is going to fail miserably in most every case -- unless you first take care to braid off every micron of solder you can manage. For prototyping, the best thing for these parts is to just not use paste or oven in the first place. Do everything else in the oven first, then hand solder the 0.5mm parts. The 0.8mm or more parts shouldn't be a problem, though -- mostly because they (should) have solder mask between each pin, which is not usually the case for 0.5mm pitch, not that it would make much difference for them.
+
+If you're lucky enough to have yourself or have access to a pick and place machine and the job warrants it -- or if you just want to use paste for everything because it yields mastery :P -- then just don't use HASL boards! Spend the extra $20 or whatever to go the gold plated route. It's well worth it. (Especially for black mask boards. Yummy eye candy! :P)
+ 
+*Hint 17*:
 Just dive in! You can only get better. And I bet you'll surprise yourself, quicker than you might think. I am _amazed_ how good I now am, at something I believed near impossible for ten long years!
 
  
