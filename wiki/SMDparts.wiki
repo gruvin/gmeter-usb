@@ -15,20 +15,23 @@ Here's a clue for you -- it's all about flux -- modern, clear liquid flux! (And 
 
 A little vacuum pump hand tool for picking up and placing tiny SMD parts is a great idea, too. These are available from China, on eBay. Search, "SMD vacuum tool". Oh, not the stand-alone pen type (though those are worth the purchase just for the tool tips) but the ones with a separate pump and hoses, are what you want. They're something like a converted aquarium pump, I guess with the one-way valves reversed.
 
-*What about the need for PCBs for SMD work?*
-OK. So the only small catch is the general need for a printed circuit board. But you can now get full production quality, multi-layer, dirt cheap circuit boards from the likes of [http://iteadstudio.com ITead Studio] in Shenzhen, China. They call it a, "PCB prototyping service" -- but don't be fooled. It's not the half baked, incomplete and expensive nonsense you'll find closer to home. Not by a long shot.
+*What about the need for PCBs for SMD work?* OK. So the only small catch is the general need for a printed circuit board. But you can now get full production quality, multi-layer, dirt cheap circuit boards from the likes of [http://iteadstudio.com ITead Studio] in Shenzhen, China. They call it a, "PCB prototyping service" (actually, OpenPCB or Small Batch Service now, I think) But don't be fooled. It's not the half baked,  and much more expensive stuff you'll find closer to home (presumably). Not by a long shot.
 
-For example, I got ten (minimum quantity) of these gMeter boards for less than USD$45, delivered. (It's even cheaper to get standard green mask boards.) It takes about 15 days from time of order to boards on my doorstep, in Auckland, New Zealand. (If like me, you're outside the 52 states, then shipping from China is going to be much cheaper than from the USA, to just about anywhere -- and faster, too.)
+For example, I got ten (minimum quantity) of these gMeter boards for less than USD$45, delivered. (It's even cheaper to get standard green mask boards.) It takes about 15 days from time of order to boards on my doorstep, in Auckland, New Zealand -- give or take Chinese holidays, of course. If like me, you're outside the 52 states, then shipping from China is going to be much cheaper than from the USA, to just about anywhere -- and generally faster, too. Just six days from Shenzhen to Auckland, including customs clearance. Something like 9,000KMs, at a guess.
 
-There is also the option of making your own boards, at least in the "real" prototyping stage. There is excellent toner transfer paper and the like available these days. Personally though, with all the fuss and drilling of hole if there's through-hole parts ... I just don't bother. I prototype on something like an Arduino or some other pre-existing AVR platform (in this project's case) and just wait for the high quality boards to arrive from China. (I just have enough other projects going that I don't even notice the time lag.)
+If you have a laser printer, then there's also the option of making your own boards, using that nifty toner transfer sheets. Look on youTube to learn how to get best results. Personally though, with cost of that stuff and all the fuss of aligned double-sided designs and drilling of holes if there's through-hole parts ... I just don't bother. Instead, I prototype on something like an Arduino or some other pre-existing AVR platform (in this project's case) and just wait for the high quality boards to arrive from China. Having enough other projects going on will make the time fly by anyway.)
 
-Oh -- to order PCBs, you need to provide "Gerber" files. Do NOT use those silly proprietary programs, that lock to into a single, hellish expensive board supplier (EasyPCB etc!!)
+Oh -- to order PCBs, you need to provide "Gerber" files -- board edges, top and bottom copper, mask and silk layers. So forget about those proprietary programs, that lock to into a single, hellish expensive board supplier (EasyPCB etc) by not giving you Gerber output. Honestly -- you could easily be talking the difference between $200+ for a couple of half made boards with no mask or silk layers, versus $40 for ten full production quality versions!
 
-I use KiCAD. It's free and has no limitations of size, hole count, etc. There's the infamous, "Eagle" for smaller boards. But I got burned when I started maker larger boards, where it then becomes far too costly for the hobbyist -- and you can't export to free programs. There's also the gEDA suite (free) and the now very nicely priced and very powerful AutoTrax DEX 2012, available for at most US$150 -- with no size or hole count limitations! DEX looks great and is theoretically portable, since all its files are something like XML. But I have no experience with it -- and I don't like being force to use @#$! Windows. {shrug}
+I use KiCAD for the PCB design job. It's free and has no limitations of size, hole count, etc. 
 
-ALL of those options will free you to generate industry standard Gerber files, for use at any factory of your choosing.
+There's the infamous, "Eagle" for smaller boards. But I got burned when I started maker larger boards, where it then becomes far too costly for the hobbyist -- and you can't export to free programs. 
 
-It's a whole new world out there folks. :P
+There's also the gEDA suite -- free, open source. Haven't used it. 
+
+A new comer and very tempting too is conservatively priced and very powerful AutoTrax DEX 2012, available for at most US$150 -- with no size or hole count limitations! It includes full auto-0routing and 3D view, too! DEX looks great and is theoretically portable, since all its files are something like XML. But I have no experience with it to date -- and I likely won't, because I don't like being forced to use @#$! Windows. Guess I'll miss out.
+
+In any case, all of those options will free you to generate industry standard Gerber files, for use at any factory of your choosing. So the world is your oyster (whatever that means! ;-)
 
 - - - -
 
