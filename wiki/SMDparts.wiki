@@ -26,3 +26,7 @@ Oh -- to order PCBs, you need to provide "Gerber" files. Do NOT use those silly 
 ALL of those options will free you to generate industry standard Gerber files, for use at any factory of your choosing.
 
 It's a whole new world out there folks. :P
+
+- - - -
+
+Just for fun, [http://www.youtube.com/watch?v=FO9CHjdqBr8 here's an SMD parts video] I enjoy watching. This guy is entertaining and fun. In this video, he seems to be kindly showing you how you can really mess about with relative freedom, making all kinds of mistakes and still get a good final result. In reality and with practice, you will in fact get learn more advanced techniques, so that you can get things done right first time, without need for any de-soldering braid, most of the time.  I know. Someone reading these words feels I'm probably just full of crap. I know, because I preached to message to any and all who would listen, for TEN YEARS. LOL. Trust me. I was WRONG. :P
