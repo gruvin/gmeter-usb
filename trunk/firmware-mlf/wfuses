@@ -1,0 +1,1 @@
+avrdude -c usbasp -P usb -p atmega88p -B8 -u -U lfuse:w:0xf7:m -U hfuse:w:0xd4:m -U efuse:w:0xf9:m

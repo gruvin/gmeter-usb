@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = Wed 12 Jun 2013 10:29:25 PM NZST
+Cmp-Mod V01 Created by CvPcb (2013-mar-13)-testing date = Wed 10 Jul 2013 02:26:12 AM NZST
 
 BeginCmp
 TimeStamp = /4ED087A6;
@@ -199,56 +199,56 @@ EndCmp
 BeginCmp
 TimeStamp = /51A743DA;
 Reference = R9;
-ValeurCmp = 470;
+ValeurCmp = 1K5;
 IdModule  = SM0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743DD;
 Reference = R10;
-ValeurCmp = 470;
+ValeurCmp = 1K;
 IdModule  = SM0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743E1;
 Reference = R11;
-ValeurCmp = 470;
+ValeurCmp = 1K;
 IdModule  = SM0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743E4;
 Reference = R12;
-ValeurCmp = 470;
+ValeurCmp = 1K;
 IdModule  = SM0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743E7;
 Reference = R13;
-ValeurCmp = 470;
+ValeurCmp = 1K;
 IdModule  = SM0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743EB;
 Reference = R14;
-ValeurCmp = 470;
+ValeurCmp = 1K;
 IdModule  = SM0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743EE;
 Reference = R15;
-ValeurCmp = 470;
+ValeurCmp = 3K9;
 IdModule  = SM0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /51A743F1;
 Reference = R16;
-ValeurCmp = 470;
+ValeurCmp = 3K9;
 IdModule  = SM0603;
 EndCmp
 
@@ -256,7 +256,7 @@ BeginCmp
 TimeStamp = /4ECC4B2B;
 Reference = X1;
 ValeurCmp = 12MHz;
-IdModule  = SMD_XTAL_ABM3;
+IdModule  = XTAL_SMD_ABM3;
 EndCmp
 
 EndListe

@@ -31,7 +31,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:npn-bce
 LIBS:gMeter-mlf-cache
-EELAYER 27 0
+EELAYER 24 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -191,7 +191,7 @@ Wire Wire Line
 Wire Wire Line
 	4050 3700 4050 3850
 Wire Wire Line
-	3950 6600 4150 6600
+	3950 6600 5000 6600
 Connection ~ 4050 6600
 Wire Wire Line
 	3050 5300 2800 5300
@@ -692,7 +692,7 @@ F 3 "" H 4050 3700 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ATMEGA48P IC1
+L ATMEGA88P IC1
 U 1 1 4ECC4939
 P 4050 5100
 F 0 "IC1" H 4050 5550 60  0000 C CNN
@@ -937,4 +937,7 @@ F 3 "" H 7200 2200 60  0000 C CNN
 	1    7200 2200
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5000 6600 5000 6050
+Connection ~ 4150 6600
 $EndSCHEMATC
